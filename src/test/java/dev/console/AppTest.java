@@ -36,10 +36,11 @@ public class AppTest {
 
 	@Test
 	public void testAfficherTitre() throws Exception {
+		LOG.info("Lorsque la méthode afficherTitre est invoquée");
 		this.app.afficherTitre();
 
+		LOG.info("Alors dans la console, s'affiche '**** Application Calculatrice ****'");
 		String logConsole = systemOutRule.getLog();
-
 		assertThat(logConsole).contains("**** Application Calculatrice ****");
 	}
 
