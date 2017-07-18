@@ -11,9 +11,9 @@ import java.util.stream.*;
 public class CalculService {
 
 	private static final Logger LOG = LoggerFactory.getLogger(CalculService.class);
-
+	
 	public int additionner(String expression) throws CalculException {
-		LOG.debug("Evaluation de l'expression " + expression);
+		LOG.info("Evaluation de l'expression " + expression);
 
 		String expressionNotNull;
 		try {
@@ -23,6 +23,7 @@ public class CalculService {
 			Stream<String> numbers = Stream.of(expressionNotNull.split("\\+"));
 	
 			return numbers.collect(Collectors.summingInt(Integer::valueOf));
+			
 		} catch (NumberFormatException e) {
 			LOG.error("Erreur générée par une expression invalide", e);
 			throw new CalculException(e);

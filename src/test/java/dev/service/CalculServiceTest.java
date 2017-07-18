@@ -34,7 +34,7 @@ public class CalculServiceTest {
 		LOG.info("Etant donné une instance de la classe CalculService");
 		CalculService calcul = new CalculService();
 		
-		LOG.info("Lorsque j'évalue l'addition d'une l'expression vide");
+		LOG.info("Lorsque j'évalue l'addition d'une expression vide");
 		calcul.additionner("");
 	}
 	
